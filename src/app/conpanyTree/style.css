@@ -1,0 +1,79 @@
+[class^='icon_'],
+[class*=' icon_'] {
+  background: none;
+}
+.warning {
+  color: red;
+}
+ngTree {
+  color: #000000;
+  font-weight: normal;
+  font-size: 20px;
+}
+.icon-bin,
+.icon-plus,
+.icon-edit {
+  color: #aaa;
+}
+.icon-bin:hover {
+  color: red;
+}
+.icon-plus:hover {
+  color: #888;
+}
+.icon-edit:hover {
+  color: green;
+}
+.demos {
+  text-align: center;
+}
+.demos h2 {
+  padding: 10px 0.5em;
+  margin: 0;
+}
+.demos .demo {
+  overflow: auto;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  height: 400px;
+  padding: 5px;
+  width: 280px;
+}
+
+/****************************/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('app/conpanyTree/fonts/icomoon.eot?oqd1tg');
+  src:  url('app/conpanyTree/fonts/icomoon.eot?oqd1tg#iefix') format('embedded-opentype'),
+  url('app/conpanyTree/fonts/icomoon.ttf?oqd1tg') format('truetype'),
+  url('app/conpanyTree/fonts/icomoon.woff?oqd1tg') format('woff'),
+  url('app/conpanyTree/fonts/icomoon.svg?oqd1tg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+  content: "\e905";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}

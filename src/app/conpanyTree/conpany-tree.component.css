@@ -1,0 +1,190 @@
+ngTree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 18px;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.2s;
+  /* Safari */
+  transition: height .2s;
+  overflow: hidden;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  text-align: left!important;
+}
+
+ngTree > * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.ngtree_node_info + .sub_ngtree {
+  padding-left: 1em;
+}
+.ngtree_node_selected.ngtree_node_info .ngtree_node_info_wraper {
+  background: #FFE6B0;
+  outline-color: #FFB951;
+}
+.ngtree_node_selected.ngtree_node_info .ngtree_node_toolbar div {
+  transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -moz-transform: scale(1, 1);
+  /* Firefox */
+  -webkit-transform: scale(1, 1);
+  /* Safari 和 Chrome */
+  -o-transform: scale(1, 1);
+}
+.sub_ngtree {
+  background: url(app/conpanyTree/icon/point.svg) repeat-y 0 0;
+  background-size: 1em;
+}
+.ngtree_node_info.ngtree_closed + .sub_ngtree {
+  display: none;
+}
+.ngtree_node_info {
+  white-space: nowrap;
+  cursor: default;
+  line-height: 0;
+}
+.ngtree_node_info .ngtree_connect,
+.ngtree_node_info .ngtree_node_icon,
+.ngtree_node_info .ngtree_node_name,
+.ngtree_node_info .ngtree_node_toolbar {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ngtree_node_info:hover .ngtree_node_toolbar div {
+  transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -moz-transform: scale(1, 1);
+  /* Firefox */
+  -webkit-transform: scale(1, 1);
+  /* Safari 和 Chrome */
+  -o-transform: scale(1, 1);
+}
+.ngtree_node_info_wraper {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8em;
+  padding: 0 0 0 0.05em;
+  outline: 1px transparent solid;
+  box-sizing: border-box;
+}
+.ngtree_node_info_wraper:hover {
+  background: rgba(253, 228, 175, 0.1);
+  outline-color: rgba(255, 185, 81, 0.1);
+}
+.ngtree_folder .ngtree_folder_icon {
+  position: relative;
+  background: none;
+  perspective: 3em;
+  -webkit-perspective: 3em;
+}
+.ngtree_folder .ngtree_folder_icon:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(app/conpanyTree/icon/folder_back.png) no-repeat center center;
+  background-size: 0.9em auto;
+  z-index: -1;
+}
+.ngtree_folder .ngtree_folder_icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(app/conpanyTree/icon/folder_front.png) no-repeat center center;
+  background-size: 0.9em auto;
+  -moz-transform: rotateX(0);
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  -moz-transform-origin: 50% 88%;
+  -webkit-transform-origin: 50% 88%;
+  transform-origin: 50% 88%;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -1;
+}
+.ngtree_folder.ngtree_node_open .ngtree_folder_icon:after {
+  -moz-transform: rotateX(-50deg);
+  -webkit-transform: rotateX(-50deg);
+  transform: rotateX(-50deg);
+}
+.ngtree_node_name {
+  font-size: 0.8em;
+  padding: 0 0.1em;
+}
+/*文件*/
+.ngtree_node_info .ngtree_connect {
+  background-position: 0 0;
+}
+/*文件夹-关闭*/
+.ngtree_node_info.ngtree_folder .ngtree_connect {
+  background-position: 12.5% 0;
+}
+/*文件夹-打开*/
+.ngtree_node_info.ngtree_folder.ngtree_node_open .ngtree_connect {
+  background-position: 25% 0;
+}
+.ngtree_node {
+  /*最后的-文件*/
+  /*最后的-文件夹*/
+  /*最后的-文件夹-打开*/
+}
+.ngtree_node:last-child > .ngtree_node_info .ngtree_connect {
+  background-position: 37.5% 0;
+}
+.ngtree_node:last-child > .ngtree_folder .ngtree_connect {
+  background-position: 62.5% 0;
+}
+.ngtree_node:last-child > .ngtree_folder.ngtree_node_open .ngtree_connect {
+  background-position: 50% 0;
+}
+.ngtree_node:last-child > .sub_ngtree {
+  background: none;
+}
+.ngtree_connect,
+.ngtree_node_icon {
+  height: 1em;
+  width: 1em;
+  -webkit-user-select: none;
+  user-select: none;
+  background-image: url(app/conpanyTree/icon/icons.svg);
+  background-repeat: no-repeat;
+  background-size: 900% 200%;
+  background-position: 38% 100%;
+}
+.ngtree_node_icon {
+  margin: 0 0.125em;
+}
+.ngtree_node_icon.tree_icon_hide {
+  width: 0;
+  margin: 0;
+}
+.ngtree_node_toolbar {
+  margin-left: 8px;
+}
+.ngtree_node_toolbar div {
+  display: inline-block;
+  font-size: .8em;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin: 0 2px;
+  user-select: none;
+  -webkit-transition: transform .08s;
+  /* Safari */
+  transition: transform .08s;
+  -ms-transform: scale(0, 0);
+  /* IE 9 */
+  -moz-transform: scale(0, 0);
+  /* Firefox */
+  -webkit-transform: scale(0, 0);
+  /* Safari 和 Chrome */
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
